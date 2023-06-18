@@ -142,6 +142,8 @@ class _HomePageState extends State<HomePage> {
   void equalPressed (){
     String finalQuestion = userQuestion;
     finalQuestion = finalQuestion.replaceAll('x', '*');
+    finalQuestion = finalQuestion.replaceAll('ANS', userAnswer);
+    
     
     Parser p = Parser();
     Expression exp = p.parse(finalQuestion);
